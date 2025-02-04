@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sebmorales/Documents/GitHub/Benchmark-Contendores/C#/FactorialApp/FactorialApp.csproj": {}
+    "/Users/sebmorales/Documents/GitHub/Benchmark-Contendores/CS/FactorialApp/FactorialApp.csproj": {}
   },
   "projects": {
-    "/Users/sebmorales/Documents/GitHub/Benchmark-Contendores/C#/FactorialApp/FactorialApp.csproj": {
+    "/Users/sebmorales/Documents/GitHub/Benchmark-Contendores/CS/FactorialApp/FactorialApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sebmorales/Documents/GitHub/Benchmark-Contendores/C#/FactorialApp/FactorialApp.csproj",
+        "projectUniqueName": "/Users/sebmorales/Documents/GitHub/Benchmark-Contendores/CS/FactorialApp/FactorialApp.csproj",
         "projectName": "FactorialApp",
-        "projectPath": "/Users/sebmorales/Documents/GitHub/Benchmark-Contendores/C#/FactorialApp/FactorialApp.csproj",
+        "projectPath": "/Users/sebmorales/Documents/GitHub/Benchmark-Contendores/CS/FactorialApp/FactorialApp.csproj",
         "packagesPath": "/Users/sebmorales/.nuget/packages/",
-        "outputPath": "/Users/sebmorales/Documents/GitHub/Benchmark-Contendores/C#/FactorialApp/obj/",
+        "outputPath": "/Users/sebmorales/Documents/GitHub/Benchmark-Contendores/CS/FactorialApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/sebmorales/.nuget/NuGet/NuGet.Config"
