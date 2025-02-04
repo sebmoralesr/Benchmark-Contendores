@@ -1,12 +1,11 @@
-# Usa una imagen base con Node.js
-FROM node:16
+# Usa una imagen base oficial de Node.js
+FROM node:18-slim
 
-# Establece el directorio de trabajo
+# Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
-# Copia los archivos fuente al contenedor
-COPY . /app
+# Copia el archivo de código fuente al contenedor
+COPY factorial.js .
 
-
-# Comando para ejecutar el archivo JavaScript
-CMD ["node", "factorial.js"]
+# Establece el comando por defecto para ejecutar el programa
+ENTRYPOINT ["node", "factorial.js"]
