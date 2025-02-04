@@ -7,8 +7,6 @@ WORKDIR /app
 # Copia los archivos fuente al contenedor
 COPY . /app
 
-# Instala las dependencias (si usas npm)
-RUN npm install
 
 # Comando para ejecutar el archivo JavaScript
 CMD ["node", "factorial.js"]
