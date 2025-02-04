@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <chrono>
+#include <fstream>
 
 using namespace std;
 using namespace chrono;
@@ -21,7 +22,12 @@ void factorial(int n) {
         }
     }
 
-    
+    // Guardar resultado en archivo
+    ofstream output_file("resultado.txt");
+    if (output_file.is_open()) {
+        output_file << "Dígitos en " << n << "! : " << result.size() << endl;
+    }
+    output_file.close();
 }
 
 int main() {
@@ -31,10 +37,17 @@ int main() {
     factorial(n);
 
     auto end = high_resolution_clock::now();
-    cout << "Tiempo de ejecución: "
-         << duration_cast<milliseconds>(end - start).count()
-         << " ms" << endl;
+    long long exec_time = duration_cast<milliseconds>(end - start).count();
+
+    // Guardar tiempo de ejecución en archivo
+    ofstream output_file("resultadoCPP.txt", ios::app); // Abrir en modo append
+    if (output_file.is_open()) {
+        output_file << "Tiempo de ejecución: " << exec_time << " ms" << endl;
+    }
+    output_file.close();
+
+    // También imprimir en consola
+    cout << "Tiempo de ejecución: " << exec_time << " ms" << endl;
 
     return 0;
 }
-

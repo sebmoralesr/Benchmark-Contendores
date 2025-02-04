@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 console.time("Tiempo de ejecución");
 
 function factorial(n) {
@@ -12,5 +14,9 @@ const n = 10000;
 const result = factorial(n);
 
 console.timeEnd("Tiempo de ejecución");
+
+// Guardar los resultados en un archivo
+fs.appendFileSync('resultadoJS.txt', `Tiempo de ejecución: ${process.hrtime.bigint()} ns\n`, 'utf8');
+
 
 

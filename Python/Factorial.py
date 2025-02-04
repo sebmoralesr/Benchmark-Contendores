@@ -9,8 +9,16 @@ def factorial(n):
 n = 10000
 start_time = time.time()
 
-
+# Calcular el factorial
+factorial(n)
 
 end_time = time.time()
+execution_time = (end_time - start_time) * 1000  # Convertir a milisegundos
 
-print(f"Tiempo de ejecución: {(end_time - start_time) * 1000:.2f} ms")
+# Guardar en un archivo de texto
+with open("resultadoPY.txt", "w") as file:
+    
+    file.write(f"Tiempo de ejecución: {execution_time:.2f} ms\n")
+
+# Imprimir también en consola
+print(f"Tiempo de ejecución: {execution_time:.2f} ms")

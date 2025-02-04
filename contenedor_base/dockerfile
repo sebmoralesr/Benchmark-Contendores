@@ -1,0 +1,15 @@
+# Imagen base con Docker en Docker (dind)
+FROM docker:latest
+
+# Instalar dependencias necesarias
+RUN apk add --no-cache git bash
+
+# Crear directorio de trabajo
+WORKDIR /app
+
+# Copiar el script que ejecutará los benchmarks
+COPY ejecutar_benchmark.sh /app/
+RUN chmod +x /app/ejecutar_benchmark.sh
+
+# Definir el punto de entrada
+ENTRYPOINT ["/app/ejecutar_benchmark.sh"]
