@@ -5,10 +5,10 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copia el archivo de código fuente al contenedor
-COPY Factorial.java .
+COPY factorial.java .
 
 # Compila el código Java
-RUN javac Factorial.java
+RUN javac factorial.java
 
 # Establece el comando por defecto para ejecutar el programa
-ENTRYPOINT ["java", "Factorial"]
+ENTRYPOINT ["java", "factorial"]
