@@ -1,0 +1,13 @@
+# Use the official Node.js image as the base
+FROM node:latest
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the JavaScript source code to the container
+COPY . /app
+
+# Install any dependencies if needed (none in this case)
+
+# Define the command to run the JavaScript program
+CMD ["node", "main.js"]

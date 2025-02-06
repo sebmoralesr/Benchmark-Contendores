@@ -1,0 +1,14 @@
+# Use an official GCC image as the base
+FROM gcc:latest
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the C++ source code to the container
+COPY . /app
+
+# Compile the C++ code
+RUN g++ -o factorial_app main.cpp
+
+# Define the command to run the executable
+CMD ["./factorial_app"]

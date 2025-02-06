@@ -1,0 +1,14 @@
+# Use the official OpenJDK image as the base
+FROM openjdk:latest
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the Java source code to the container
+COPY . /app
+
+# Compile the Java code
+RUN javac Factorial.java
+
+# Define the command to run the Java program
+CMD ["java", "Factorial"]
